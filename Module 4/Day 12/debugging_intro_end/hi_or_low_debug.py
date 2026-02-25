@@ -14,6 +14,7 @@ high_low_input = input("Do you think you are higher or lower than the number? (h
 result = ""
 breakpoint()
 # Compare the user input to the random number
+
 if user_guess == random_number:
     result = "correct"
 elif user_guess > random_number:
