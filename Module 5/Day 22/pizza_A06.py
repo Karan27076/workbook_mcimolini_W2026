@@ -6,6 +6,14 @@ def make_pizza_with_default(size=12, crust="thin"):
     """Summarize the pizza we are about to make:"""
     print("\nMaking a " + str(size) + " - inch pizza with " + crust +" crust.")
 
+def make_pizza_with_topping(*toppings, size=12, crust="thin"):
+    """Summarize the pizza we are about to make:"""
+    print("\nMaking a " + str(size) + " - inch pizza with " + crust +" crust.")
+    print("The topping added are:")
+    for topping in toppings:
+        print("-" + topping)
+
+
 if __name__ == "__main__":
     make_pizza(16, "thin")
     make_pizza(12, "thick")
@@ -16,3 +24,6 @@ if __name__ == "__main__":
     make_pizza_with_default(22)
     make_pizza_with_default("thin")  
     make_pizza_with_default(crust="medium")
+
+    make_pizza_with_topping("cheese", 16, "thin")
+    make_pizza_with_topping("cheese", "pepperoni", 18, "thin")
